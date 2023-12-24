@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main: #2ec4b6;
+  --dark-text: #000b0a;
+  --body: #737373;
+  --border: #f0f0f0;
+}
+
+body {
+  font-family: "Sofia Pro", sans-serif;
+  background: rgb(46, 194, 179, 0.04);
+}
+
+.section {
+  padding: 40px 16px 64px;
+}
+
+/* contents */
+.content {
+  margin-bottom: 30px;
+}
+.content img {
+  width: 40px;
+  height: auto;
+}
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 10px;
+}
+.description {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+  color: var(--body);
+}
+
+/* form */
+form {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.1);
+  padding: 24px 16px;
+}
+.form {
+}
+.input-field {
+  margin-bottom: 20px;
+}
+
+.input-field label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.input-field input,
+.input-field select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+}
+
+.input-field input:focus,
+.input-field select:focus {
+  outline: none;
+  border: 2px solid var(--main);
+}
+
+button {
+  background-color: var(--main);
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.form p {
+  text-align: center;
+}
+
+.form p a {
+  color: var(--main);
+}
+
+/* media query tablet*/
+@media screen and (min-width: 768px) {
+  .content {
+    text-align: center;
+    width: 70%;
+    margin-inline: auto;
+  }
+  .form {
+    width: 70%;
+    margin-inline: auto;
+  }
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+  button {
+    grid-column: 1 / 3;
+  }
+}
+/* media query desktop */
+@media screen and (min-width: 1024px) {
+  .section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 81px 100px;
+  }
+
+  .content img {
+    width: 100px;
+    height: auto;
+  }
+  .content {
+    width: 40%;
+    text-align: left;
+  }
+
+  .form {
+    width: calc(60% - 150px);
+  }
+  .input-field:nth-child(7) {
+    grid-column: 1 / 3;
+  }
+  .input-field:nth-child(8) {
+    grid-column: 1 / 3;
+  }
+
+  button {
+    grid-column: 1 / 3;
+  }
+
+  .input-field {
+    margin-bottom: 10px;
+  }
+
+  .input-field label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    display: inline-block;
+  }
+
+  .input-field input,
+  .input-field select {
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+  }
+}
